@@ -18,3 +18,8 @@ class Solution:
                 return firstCap and all(noCaps[1:])
             else: return all(allCaps)
         return all(noCaps)
+
+    # Alternate method: 1 liner
+    class Solution:
+        def detectCapitalUse(self, word: str) -> bool:
+            return (word == word.capitalize()) or word.isupper() or word.islower()
