@@ -4,7 +4,6 @@
 
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
-        # bool flag list to indicate whether column should be removed or not     
         result = 0
         N, L = len(strs), len(strs[0])
         for col in range(L):
