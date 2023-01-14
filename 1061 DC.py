@@ -1,6 +1,6 @@
 # author = Lavanya Naresh
-# created = Jan 10, 2023
-# modified = Jan 10, 2023
+# created = Jan 14, 2023
+# modified = Jan 14, 2023
 
 class Solution:
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
