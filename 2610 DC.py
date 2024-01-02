@@ -36,8 +36,12 @@ class Solution:
             current_row_nums = set()
             # iterate over all numbers in nums
             for index in range(N):
+                # if the number is already added to the result 2-D array, continue to next index
+                if added_in_result[index]:
+                    continue
+
                 # if the number is not already in the current row
-                if nums[index] not in current_row_nums and not added_in_result[index]:
+                if nums[index] not in current_row_nums:
                     current_row_nums.add(nums[index])
                     result[current_row].append(nums[index])
                     added_in_result[index] = True
