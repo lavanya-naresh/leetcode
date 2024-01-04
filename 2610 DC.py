@@ -49,3 +49,28 @@ class Solution:
             current_row += 1
 
         return result
+
+
+# M2:
+class Solution:
+    def findMatrix(self, nums: List[int]) -> List[List[int]]:
+        list_of_sets = []
+
+        for x in nums:
+            index = 0
+            found = False
+            while index < len(list_of_sets):
+                if x in list_of_sets[index]:
+                    index += 1
+                    continue
+                list_of_sets[index].add(x)
+                found = True
+                break
+
+            if not found:
+                list_of_sets.append(set([x]))
+
+        final = []
+        for row in list_of_sets:
+            final.append(list(row))
+        return final
