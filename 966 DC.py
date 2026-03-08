@@ -1,8 +1,9 @@
 class Solution:
     def spellchecker(self, wordlist, queries):
-        vowels = set('aeiou')
+        vowels = set("aeiou")
+
         def mask(word):
-            return ''.join('*' if ch in vowels else ch for ch in word)
+            return "".join("*" if ch in vowels else ch for ch in word)
 
         exact = set(wordlist)
         lower_map = {}

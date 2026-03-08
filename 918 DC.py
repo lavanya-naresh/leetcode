@@ -5,7 +5,7 @@
 
 class Solution:
     def maxSubarraySumCircular(self, nums: List[int]) -> int:
-        
+
         min_n = cur_n = inf
         max_x = cur_x = -inf
         total = 0

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def subsetXORSum(self, nums: List[int]) -> int:
         N = len(nums)
@@ -10,7 +11,7 @@ class Solution:
                 nonlocal result
                 result += current
                 return
-            
+
             # CASE 1: include
             suffixXOR(index + 1, current ^ nums[index])
 

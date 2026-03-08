@@ -2,16 +2,17 @@
 # created = Jan 19, 2023
 # modified = Jan 19, 2023
 
+
 class Solution:
     def subarraysDivByK(self, nums: List[int], k: int) -> int:
         """
         APPROACH:
         prefix sum
-        
+
         Say we have an array:
            a0 a1 a2 a3 ... aN
         s0 s1 s2 s3 s4 ... s(N + 1)
-        
+
         Assume:
         s5 - sX = k     ...(1)
         ie.
@@ -38,5 +39,5 @@ class Solution:
             current %= k
             result += freq_subarr_sum[current]
             freq_subarr_sum[current] += 1
-        
+
         return result

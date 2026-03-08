@@ -1,6 +1,8 @@
 # 1865. Finding Pairs With a Certain Sum
 from collections import Counter
 from typing import List
+
+
 class FindSumPairs:
 
     def __init__(self, nums1: List[int], nums2: List[int]):
@@ -19,7 +21,6 @@ class FindSumPairs:
         for number in self.nums1:
             result += self.freq[tot - number]
         return result
-        
 
 
 # Your FindSumPairs object will be instantiated and called as such:

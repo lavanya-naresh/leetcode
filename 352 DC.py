@@ -8,10 +8,8 @@ class SummaryRanges:
     def __init__(self):
         self._nums = set()
 
-
     def addNum(self, value: int) -> None:
         self._nums.add(value)
-        
 
     def getIntervals(self) -> List[List[int]]:
         intervals = []
@@ -21,7 +19,6 @@ class SummaryRanges:
             else:
                 intervals[-1][1] = num
         return intervals
-        
 
 
 # Your SummaryRanges object will be instantiated and called as such:

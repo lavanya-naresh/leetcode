@@ -2,6 +2,7 @@
 # created = Jan 10, 2023
 # modified = Jan 10, 2023
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -17,5 +18,8 @@ class Solution:
                 return True
             if node1.val != node2.val:
                 return False
-            return check_same(node1.left, node2.left) and check_same(node1.right, node2.right)
+            return check_same(node1.left, node2.left) and check_same(
+                node1.right, node2.right
+            )
+
         return check_same(p, q)

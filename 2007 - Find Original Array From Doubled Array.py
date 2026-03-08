@@ -1,10 +1,12 @@
 # 2007 - Find Original Array From Doubled Array
 
+
 class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
         N = len(changed)
-        # check if the 
-        if N % 2: return []
+        # check if the
+        if N % 2:
+            return []
         result = []
         changed.sort()
         freq = collections.Counter()
@@ -14,5 +16,6 @@ class Solution:
                 freq[value // 2] -= 1
             else:
                 freq[value] += 1
-        if len(result) * 2 != len(changed): return []
+        if len(result) * 2 != len(changed):
+            return []
         return result

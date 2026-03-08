@@ -2,6 +2,7 @@
 # created = Jan 17, 2023
 # modified = Jan 17, 2023
 
+
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
         """

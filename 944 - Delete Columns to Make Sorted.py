@@ -2,6 +2,7 @@
 # created: 3rd Jan, 2023
 # last modified: 3rd Jan, 2023
 
+
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
         result = 0

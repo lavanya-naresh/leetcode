@@ -2,6 +2,7 @@
 # created = Jan 9, 2023
 # modified = Jan 9, 2023
 
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -11,10 +12,12 @@
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []
+
         def dfs(node):
             if node:
                 result.append(node.val)
                 dfs(node.left)
                 dfs(node.right)
+
         dfs(root)
         return result

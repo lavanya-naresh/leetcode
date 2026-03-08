@@ -16,12 +16,12 @@ class Solution:
                     base = (acc * pow(10, size)) + i * pow(10, size - 1)
                     if base > n:
                         continue
-                    if str(acc * 10 + i) == str(n)[:pos+1] and len(str(base)) == N:
-                        total += int(str(n)[(pos+1):]) + 1
+                    if str(acc * 10 + i) == str(n)[: pos + 1] and len(str(base)) == N:
+                        total += int(str(n)[(pos + 1) :]) + 1
                     else:
                         total += pow(10, size - 1)
                 if total >= k:
-                    return solve(pos + 1, acc*10 + i, k)
+                    return solve(pos + 1, acc * 10 + i, k)
                 else:
                     k -= total
 
@@ -32,7 +32,11 @@ class Solution:
                 base = i * pow(10, size - 1)
                 if base > n:
                     continue
-                total += int(str(n)[1:]) + 1 if i == first and size == N else pow(10, size - 1)
+                total += (
+                    int(str(n)[1:]) + 1
+                    if i == first and size == N
+                    else pow(10, size - 1)
+                )
             if total >= k:
                 return solve(1, i, k)
             else:

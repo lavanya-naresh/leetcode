@@ -23,8 +23,10 @@ class SnapshotArray:
                 left = mid + 1
             else:
                 right = mid - 1
-        if ans == -1: return 0
+        if ans == -1:
+            return 0
         return arr[ans][1]
+
 
 # Your SnapshotArray object will be instantiated and called as such:
 # obj = SnapshotArray(length)

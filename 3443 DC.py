@@ -17,14 +17,11 @@ Output: 3
 Explanation:
 Change s[2] from 'S' to 'N'. The string s becomes "NWNE".
 """
+
+
 class Solution:
     def maxDistance(self, s: str, k: int) -> int:
-        dirs = [
-            (0, 1), # N
-            (1, 0), # E
-            (0, -1), # S
-            (-1, 0) # W
-        ]
+        dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # N  # E  # S  # W
 
         ds = "NESW"
         counts = [0] * 4
@@ -41,7 +38,7 @@ class Solution:
             used = min(min_x, ck)
             min_x -= used
             ck -= used
-            max_x += used            
+            max_x += used
 
             max_y = max(counts[0], counts[2])
             min_y = min(counts[0], counts[2])

@@ -1,6 +1,8 @@
 # 3440. Reschedule Meetings for Maximum Free Time II
 class Solution:
-    def maxFreeTime(self, eventTime: int, startTime: List[int], endTime: List[int]) -> int:
+    def maxFreeTime(
+        self, eventTime: int, startTime: List[int], endTime: List[int]
+    ) -> int:
         blocks = [(0, 0)] + list(zip(startTime, endTime)) + [(eventTime, eventTime)]
         gaps = [0] * len(blocks)
         for i in range(1, len(blocks) - 1):

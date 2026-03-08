@@ -3,7 +3,7 @@
 """
 File    :   1026 DC.py.py
 Updated :   2024/01/11 20:47:38
-Author  :   Lavanya Naresh 
+Author  :   Lavanya Naresh
 Version :   1.0
 Contact :   laksh112naresh@gmail.com
 License :   (C)Copyright 2023-24, Lavanya Naresh

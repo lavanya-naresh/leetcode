@@ -2,10 +2,12 @@
 # created = Jan 6, 2023
 # modified = Jan 6, 2023
 
+
 class Solution:
     def maxIceCream(self, costs: List[int], coins: int) -> int:
         return bisect_right(list(accumulate(sorted(costs))), coins)
-        
+
+
 # ALTERNATE:
 class Solution:
     def maxIceCream(self, costs: List[int], coins: int) -> int:

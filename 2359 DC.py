@@ -10,6 +10,7 @@ class Solution:
         Since there is at most 1 outgoing edge from each node,
         there is no requirement to keep track of visited nodes.
         """
+
         def dfs(u):
             stack = [u]
             dist = [inf] * len(edges)

@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def minimumLength(self, s: str) -> int:
         # given string s, select i st
@@ -20,5 +22,5 @@ class Solution:
         f = Counter(s)
         res = 0
         for char in f.keys():
-            res += (2 - (f[char] % 2))
+            res += 2 - (f[char] % 2)
         return res

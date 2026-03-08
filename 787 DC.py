@@ -4,7 +4,9 @@
 
 
 class Solution:
-    def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
+    def findCheapestPrice(
+        self, n: int, flights: List[List[int]], src: int, dst: int, k: int
+    ) -> int:
         cost = [inf] * n
         cost[src] = 0
         for _ in range(k + 1):

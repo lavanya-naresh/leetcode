@@ -1,5 +1,7 @@
 from typing import List
-from collections import Counter 
+from collections import Counter
+
+
 class Solution:
     def numRabbits(self, answers: List[int]) -> int:
         f = Counter(answers)
