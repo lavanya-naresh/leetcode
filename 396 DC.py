@@ -14,11 +14,10 @@ class Solution:
         if N == 1:
             return 0
         best = 0
-        total_sum = sum(nums)
-        f_store = [0 for _ in range(N)]
-        f_store[0] = sum([i * nums[i] for i in range(N)])
-        best = f_store[0]
+        total_sum = sum(nums)        
+        f = sum([i * nums[i] for i in range(N)])
+        best = f
         for k in range(1, N):
-            f_store[k] = f_store[k - 1] + total_sum - N * nums[N - k]
-            best = max(best, f_store[k])        
+            f = f + total_sum - N * nums[N - k]
+            best = max(best, f)        
         return best
